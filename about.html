@@ -21,8 +21,48 @@
     <script src="./script.js"></script>
     <style>
       body{
-        color: azure;
+        color: #7fffd4;
       }
+    </style>
+    <style>
+      .container {
+        position: relative;
+        width: 20%;
+      }
+
+      .image {
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 37%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        }
+
+        .container:hover .image {       
+          opacity: 0.3;
+        }
+
+        .container:hover .middle {
+          opacity: 1;
+        }
+
+        .text {
+          background-color: transparent;
+          color: white;
+          font-size: 4px;
+          padding: 2px 4px;
+        }
+
     </style>
 </head>
 <body style = "background-image: radial-gradient(circle,#00bfb2, #0089a6, #3d5374, #312735, #000008);">
@@ -74,23 +114,28 @@
     </header>
 
     <section id="About">
-        <div class="container">
+        <!--<div class="container">-->
           <div class="row">
             <div class="col-12"></div>
-            <h1 style="font-size: 300%; text-align: center;">About Me</h1>
-            <p style="font-size: 150%; text-align: center;">I'm my persuing Bachelore of Technology in Eectrical and Electronics Engineering at Vellore Institute of Technology, Chennai.</p>
-            <p style="font-size: 150%; text-align: center;">I like to code and I am a python person.</p>
+            <h1 style="font-size: 300%; text-align: center; color: #7fffd4;">About Me!?</h1>
+            <p style="font-size: 150%; text-align: center; color: #7fffd4;">I'm my persuing Bachelore of Technology in Eectrical and Electronics Engineering at Vellore Institute of Technology, Chennai.</p>
+            <p style="font-size: 150%; text-align: center; color: #7fffd4;">I like to code and I am a python person!</p>
           </div>
-        </div>
+       <!-- </div>-->
     </section>
     
     <section id="Hackerrank">
-      <div id="img_lnk" style="text-align: center;">
+      <div class="container" style="text-align: center;">
         <a href="https://www.hackerrank.com/krithika_suresh">
-          <img src="HackerRank_logo.png" alt="Hackerrank" width="500" height="500">
-        </a>
-        <p style="font-size: 100%; text-align: center;">Hackerrank</p>
+          <img src="HackerRank_logo.png" alt="Hackerrank" class="image" width="200" height="250">
+        </a><br>
+        <div class="middle">
+          <div class="text" style="font-size: 100%; text-align: center; color: #7fffd4;">Didn't believe me!?<br>Check out my hackerrank profile!!</div>
+        </div>
+        <br>
+        <!--<span style="font-size: 100%; text-align: center; color: #7fffd4;">Didn't believe me!?<br>Check out my hackerrank profile!!</span><br>-->
       </div>
     </section>
+
 
 </html>
